@@ -9,14 +9,16 @@ function App() {
     <Layout>
       <Header />
       <Layout.Content>
-        <Switch>
-          {route.map((item, index) => <Route
-            key={index}
-            path={item.path}
-            exact={item.exact}
-            render={props => item.render(props)}
-          />)}
-        </Switch>
+        <div className="wrap">
+          <Switch>
+            {route.map((item, index) => <Route
+              key={index}
+              path={item.path}
+              exact={item.exact}
+              render={props => item.render(props)}
+            />)}
+          </Switch>
+        </div>
       </Layout.Content>
       <Footer />
     </Layout>

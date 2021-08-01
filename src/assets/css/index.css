@@ -1,0 +1,45 @@
+/* < 576px */
+.wrap {
+  margin: 0 5px;
+}
+
+#footer {
+  padding: 24px 0;
+}
+
+/* >= 576px */
+@media all and (min-width:576px) {
+  .wrap {
+    margin: 0 10px;
+  }
+}
+
+/* >= 768px */
+@media all and (min-width:768px) {
+  .wrap {
+    margin: 0 15px;
+  }
+}
+
+/* >= 992px */
+@media all and (min-width:992px) {
+  .wrap {
+    margin: 0 20px;
+  }
+}
+
+/* >= 1200px */
+@media all and (min-width:1200px) {
+  .wrap {
+    width: 980px;
+    margin: 0 auto;
+  }
+}
+
+/* >= 1200px */
+@media all and (min-width:1600px) {
+  .wrap {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
