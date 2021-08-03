@@ -20,7 +20,7 @@ export default function IndexPage(props) {
 
   return (
     <>
-      <IndexNav selectedKeys={'/?tab=' + (tab || 'all')} />
+      <IndexNav selectedKeys={`/?tab=${tab || 'all'}`} />
       <TopicsList
         loading={loading}
         datas={data}

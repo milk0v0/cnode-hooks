@@ -33,6 +33,10 @@
   margin-top: 10px;
 }
 
+.wrap .topic-tag {
+  margin: 0 5px;
+}
+
 /* >= 576px */
 @media all and (min-width:576px) {
   .wrap {

@@ -5,7 +5,8 @@ export default function topics(topics = {
   switch (action.type) {
     case 'TOPICS_LOADING':
       return {
-        ...topics
+        ...topics,
+        loading: true
       }
     case 'TOPICS_LOADOVER':
       return {
