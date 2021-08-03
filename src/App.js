@@ -6,7 +6,7 @@ import { route } from './router';
 
 function App() {
   return (
-    <Layout>
+    <Layout className="page">
       <Header />
       <Layout.Content>
         <div className="wrap">

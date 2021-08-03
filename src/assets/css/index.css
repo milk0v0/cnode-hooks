@@ -1,4 +1,12 @@
 /* < 576px */
+#root {
+  height: 100%;
+}
+
+#root .page {
+  min-height: 100%;
+}
+
 .wrap {
   margin: 0 5px;
 }
@@ -16,6 +24,15 @@
   text-align: center;
 }
 
+.wrap .topics_list {
+  background-color: #fff;
+  padding: 0 10px;
+}
+
+.wrap .index_nav {
+  margin-top: 10px;
+}
+
 /* >= 576px */
 @media all and (min-width:576px) {
   .wrap {
@@ -27,6 +44,10 @@
 @media all and (min-width:768px) {
   .wrap {
     margin: 0 15px;
+  }
+
+  .wrap .topics_list {
+    padding: 0 20px;
   }
 }
 
@@ -42,6 +63,10 @@
   .wrap {
     width: 980px;
     margin: 0 auto;
+  }
+
+  .wrap .topics_list {
+    padding: 0 30px;
   }
 }
 
