@@ -2,6 +2,7 @@ import { UserOutlined } from '@ant-design/icons';
 import { Avatar, Col, List } from 'antd';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import FromNow from './fromNow';
 import TopicTag from './topicTag';
 
 export default function TopicsList(props) {
@@ -33,7 +34,7 @@ export default function TopicsList(props) {
               <Link to={`/topics/${id}`}>{title}</Link>
             </Col>
             <Col xs={0} md={4}>
-              日期内容
+              {FromNow(last_reply_at)}
             </Col>
           </List.Item>
         )
