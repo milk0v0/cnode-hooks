@@ -33,7 +33,7 @@ export default function TopicsList(props) {
               />
               <Link to={`/topics/${id}`}>{title}</Link>
             </Col>
-            <Col xs={0} md={4}>
+            <Col xs={0} md={4} className="from_now">
               {FromNow(last_reply_at)}
             </Col>
           </List.Item>
