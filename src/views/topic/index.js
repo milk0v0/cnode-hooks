@@ -1,9 +1,37 @@
-import React from 'react'
+import { Alert } from 'antd';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { useHistory, useParams } from 'react-router-dom';
+import { useTopic } from '../../store/action';
 
 export default function TopicPage() {
+  const { loading, data, isError, err_msg } = useSelector(state => state.topic);
+  const { id } = useParams();
+  const getData = useTopic();
+  const { goBack } = useHistory();
+
+  useEffect(() => {
+    getData(id);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <div>
-      主题详情
+      {isError ? <Alert
+        message="请求异常"
+        description={
+          <>
+            <div>{err_msg}</div>
+            <div>点击关闭按钮返回上一步</div>
+          </>
+        }
+        type="error"
+        showIcon
+        closable
+        afterClose={() => {
+          goBack();
+        }}
+      /> : ""}
     </div>
   )
 }

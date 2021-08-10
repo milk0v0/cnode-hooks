@@ -4,14 +4,15 @@ import { useSelector } from 'react-redux';
 import TopicsList from '../../components/topicsList';
 import { useTopicsList } from '../../store/action';
 import IndexNav from './indexNav';
+import IndexPagination from './indexPagination';
 
 export default function IndexPage(props) {
   const { location } = props;
   const { search } = location;
-  let { tab, page } = qs.parse(search.substr(1));
+  const { tab, page } = qs.parse(search.substr(1));
 
   const { data, loading } = useSelector(state => state.topics);
-  let getData = useTopicsList();
+  const getData = useTopicsList();
 
   useEffect(() => {
     getData(tab, page);
@@ -25,6 +26,7 @@ export default function IndexPage(props) {
         loading={loading}
         datas={data}
       />
+      <IndexPagination />
     </>
   )
 }

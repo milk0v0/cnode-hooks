@@ -21,7 +21,7 @@ export default function Header() {
               <Menu
                 mode="horizontal"
                 theme="dark"
-                defaultSelectedKeys={[pathname]}
+                selectedKeys={[pathname]}
               >
                 {nav.map(item => <Menu.Item key={item.to}>
                   <Link to={item.to}>{item.txt}</Link>

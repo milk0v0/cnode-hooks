@@ -41,6 +41,14 @@
   text-align: right;
 }
 
+.index-pagination {
+  border-top: 1px solid #f0f0f0;
+  padding: 10px 5px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
 /* >= 576px */
 @media all and (min-width:576px) {
   .wrap {
