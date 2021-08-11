@@ -1,6 +1,8 @@
 export default function topic(topic = {
   loading: true,
-  data: {},
+  data: {
+    author: {}
+  },
   isError: false,
   err_msg: ''
 }, action) {
@@ -9,7 +11,9 @@ export default function topic(topic = {
       return {
         ...topic,
         loading: true,
-        data: {},
+        data: {
+          author: {}
+        },
         isError: false,
         err_msg: ''
       }
@@ -23,7 +27,9 @@ export default function topic(topic = {
       return {
         ...topic,
         loading: false,
-        data: {},
+        data: {
+          author: {}
+        },
         isError: true,
         err_msg: action.err_msg
       }

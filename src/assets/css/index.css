@@ -1,3 +1,7 @@
+img {
+  max-width: 100%;
+}
+
 /* < 576px */
 #root {
   height: 100%;
@@ -47,6 +51,10 @@
   background-color: #fff;
   display: flex;
   justify-content: center;
+}
+
+.topic .ant-card {
+  margin-top: 10px;
 }
 
 /* >= 576px */

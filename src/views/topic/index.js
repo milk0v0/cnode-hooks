@@ -3,6 +3,8 @@ import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 import { useTopic } from '../../store/action';
+import Details from './details';
+import Replies from './replies';
 
 export default function TopicPage() {
   const { loading, data, isError, err_msg } = useSelector(state => state.topic);
@@ -16,7 +18,7 @@ export default function TopicPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div>
+    <div className="topic">
       {isError ? <Alert
         message="请求异常"
         description={
@@ -31,7 +33,16 @@ export default function TopicPage() {
         afterClose={() => {
           goBack();
         }}
-      /> : ""}
+      /> : <>
+        <Details
+          loading={loading}
+          data={data}
+        />
+        <Replies
+          loading={loading}
+          data={data.replies}
+        />
+      </>}
     </div>
   )
 }
