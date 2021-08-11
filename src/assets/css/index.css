@@ -57,6 +57,14 @@ img {
   margin-top: 10px;
 }
 
+.user_page .ant-card {
+  margin-top: 10px;
+}
+
+.user-details {
+  text-align: center;
+}
+
 /* >= 576px */
 @media all and (min-width:576px) {
   .wrap {

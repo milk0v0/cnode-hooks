@@ -32,5 +32,22 @@ function useTopic() {
   }
 }
 
-export { useTopicsList, useTopic };
+// 获取主题详情
+function useUser() {
+  const dispatch = useDispatch();
+  return async (loginname) => {
+    dispatch({ type: 'USER_LOADING' });
+    document.documentElement.scrollTop = 0;
+
+    try {
+      const res = await http.get(`/user/${loginname}`);
+      dispatch({ type: 'USER_LOADOVER', data: res.data.data });
+    } catch (error) {
+      dispatch({ type: 'USER_ERROR', err_msg: error.response.data.error_msg });
+    }
+
+  }
+}
+
+export { useTopicsList, useTopic, useUser };
 

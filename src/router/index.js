@@ -21,7 +21,7 @@ const route = [{
     return <TopicsPage {...props} />
   }
 }, {
-  path: '/user/:userName',
+  path: '/user/:loginname',
   exact: true,
   render(props) {
     return <UserPage {...props} />
