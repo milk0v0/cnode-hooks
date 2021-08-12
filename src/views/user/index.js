@@ -11,7 +11,6 @@ export default function UserPage() {
   const getData = useUser();
   const { data, loading } = useSelector(state => state.user);
   const { recent_replies = [], recent_topics = [], avatar_url, create_at, githubUsername, score } = data;
-  // console.log(data, loading);
 
   useEffect(() => {
     getData(loginname);
