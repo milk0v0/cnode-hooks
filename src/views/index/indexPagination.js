@@ -10,8 +10,7 @@ export default function IndexPagination() {
   return (
     <div className="index-pagination">
       <Pagination
-        key={page}
-        defaultCurrent={page}
+        current={+page}
         defaultPageSize={20}
         showSizeChanger={false}
         total={1000}
